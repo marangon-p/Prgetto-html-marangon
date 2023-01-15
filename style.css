@@ -1,0 +1,112 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+	font-family: 'IBM Plex Sans', sans-serif;
+}
+
+body {
+	background-color: lightgray;
+}
+
+header {
+	width: 100vw;
+	height: 64px;
+	background-color: rgb(21, 21, 30);
+	position: fixed; /* when scrolling, it remains fixed to its position with respect to the window */
+	top: 10;
+	border-left: 100;
+    border-right: 100;
+	color: rgb(255, 255, 255);
+	display: flex; /* a way to display items in a layout */
+	justify-content: center; /* horizontal centring */
+	align-items: center; /* vertical centring */
+	z-index: 1000;
+}
+header .header-img{
+    width: 100px;
+	height: 60px;
+}
+
+footer {
+	width: 100vw;
+	height: 24px;
+	background-color: #FFF;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	font-size: 12px;
+	padding: 4px;
+}
+
+
+main {
+	width: 100vw;
+	position: absolute; /* the absolute position with respect to the whole page */
+	top: 64px;
+	left: 0;
+}
+
+#left-column, #center-column { 
+	padding: 12px;
+}
+
+#left-column {
+	width: 25vw;
+	position: fixed;
+	top: 64px;
+}
+
+#left-column {
+	height: calc(100vh - 64px - 24px);
+	left: 0;
+}
+
+#center-column {
+	position: absolute;
+	left: 25vw;
+	width: 75vw;
+	background-color: #959595;
+	padding-bottom: 24px;
+}
+
+.teams-list {
+	background-color: rgb(239, 220, 213);
+	padding: 12px;
+	border-radius: 8px;	
+	font-size: 18px;
+	margin-bottom: 4px;
+	cursor: pointer; /* change cursor aspect when mouse is hover */
+}
+
+.teams-list:hover { /* change aspect when the mouse touches the element */
+	background-color: rgb(250, 156, 116);
+}
+
+.teams-list p { /* selects elements with tag p inside the .column-tabs elements (ADD A SPACE between the selectors) */
+	display: inline-block;
+}
+
+.team-info {
+	background-color: #FFF;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 16px;
+	margin-bottom: 16px;
+}
+
+.team-info-img-container {
+	align-items: center;
+	width: 75%; /* with respect to the width of its container */
+}
+
+.team-info-img {
+	align-items: center;
+	width: 100%; /* with respect to the width of its container (.post-img-container) */
+}
+
